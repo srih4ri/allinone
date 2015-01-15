@@ -22,12 +22,12 @@ There is sample application available here[https://github.com/Liberlabs/sample_m
 
 1. Add a migration to create sites and domains tables in your app.
 
-[https://github.com/Liberlabs/sample_multitenant_app/blob/master/db/migrate/20150115080301_create_sites_and_domains.rb]
+https://github.com/Liberlabs/sample_multitenant_app/blob/master/db/migrate/20150115080301_create_sites_and_domains.rb
 
 2. Add Site and Domain models in your app:
 
-[https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/site.rb]
-[https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domain.rb]
+https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/site.rb
+https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domain.rb
 
 3. Run the migrations
 
@@ -56,4 +56,4 @@ You can create more sites and domains if you like. You can also create multiple 
 
 If an invalid domain (a domain that is not present in the domains table) is used to access the site, a 'Site not found' page will be displayed by default.
 
-This behaviour can be customized by overriding 'site_not_found_handler' method in the application controller as shown here[https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/controllers/application_controller.rb#L10]
+This behaviour can be customized by overriding 'site_not_found_handler' method in the application controller as shown here. https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/controllers/application_controller.rb#L10

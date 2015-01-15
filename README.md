@@ -20,14 +20,9 @@ Or install it yourself as:
 
 There is sample application available [here](https://github.com/Liberlabs/sample_multitenant_app)
 
-* Add a migration to create sites and domains tables in your app.
+* Add a migration to create sites and domains tables in your app as shown [here](https://github.com/Liberlabs/sample_multitenant_app/blob/master/db/migrate/20150115080301_create_sites_and_domains.rb)
 
-https://github.com/Liberlabs/sample_multitenant_app/blob/master/db/migrate/20150115080301_create_sites_and_domains.rb
-
-* Add Site and Domain models in your app:
-
-[Site](https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/site.rb)
-[Domain](https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domain.rb)
+* Add Site and Domain models in your app as shown [here](https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/site.rb) and [here](https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domain.rb)
 
 * Run the migrations
 

@@ -18,29 +18,29 @@ Or install it yourself as:
 
 ## Usage
 
-There is sample application available here[https://github.com/Liberlabs/sample_multitenant_app]
+There is sample application available [here](https://github.com/Liberlabs/sample_multitenant_app)
 
-1. Add a migration to create sites and domains tables in your app.
+* Add a migration to create sites and domains tables in your app.
 
 https://github.com/Liberlabs/sample_multitenant_app/blob/master/db/migrate/20150115080301_create_sites_and_domains.rb
 
-2. Add Site and Domain models in your app:
+* Add Site and Domain models in your app:
 
-https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/site.rb
-https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domain.rb
+[Site](https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/site.rb)
+[Domain](https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domain.rb)
 
-3. Run the migrations
+* Run the migrations
 
    ```rake db:migrate```
 
-4. Add these 2 lines into your ApplicationController, towards the top.
+* Add these 2 lines into your ApplicationController, towards the top.
 
     ```
     include Allinone::Core
     act_as_allinone
     ```
 
-5. From the rails console, create a site and at least one domain.
+* From the rails console, create a site and at least one domain.
 
     ```
        s = Site.create name: 'My Site'
@@ -49,7 +49,7 @@ https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domai
 
 You can create more sites and domains if you like. You can also create multiple domains for the same site. Make sure you point the domains you create to localhost using entries in /etc/hosts (on development machines) or using DNS on production servers.
 
-6. Start the rails server and access the site.
+* Start the rails server and access the site.
 
    ```
       rails s
@@ -62,4 +62,4 @@ You can create more sites and domains if you like. You can also create multiple 
 
 If an invalid domain (a domain that is not present in the domains table) is used to access the site, a 'Site not found' page will be displayed by default.
 
-This behaviour can be customized by overriding `site_not_found_handler` method in the application controller as shown here. https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/controllers/application_controller.rb#L10
+This behaviour can be customized by overriding `site_not_found_handler` method in the application controller as shown [here] (https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/controllers/application_controller.rb#L10)

@@ -1,5 +1,15 @@
 require "allinone/version"
+require "allinone/core"
+require "allinone/site_selector"
 
 module Allinone
-  # Your code goes here...
+  module Core
+    module ClassMethods
+      def act_as_allinone
+        prepend_before_filter :set_current_site
+        helper_method :current_site
+      end
+    end
+  end
 end
+

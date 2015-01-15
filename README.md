@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add these 2 lines into your ApplicationController, towards the top.
+
+    include Allinone::Core
+    act_as_allinone
+
 
 ## Contributing
 

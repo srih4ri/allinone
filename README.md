@@ -1,6 +1,6 @@
 # Allinone
 
-TODO: Write a gem description
+A gem that adds multitenancy to a Rails app. Install the gem and your app is already capable of handling multiple domains, with a `current_site` method to help you scope data for a particular site. See Usage section for more details. 
 
 ## Installation
 

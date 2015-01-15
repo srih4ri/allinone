@@ -17,7 +17,7 @@ module Allinone
 
       site_not_found_handler unless current_site
 
-      RequestStore.store[:current_site] = @current_site
+      RequestStore.store[:current_site] = current_site
     end
 
     def site_not_found_handler

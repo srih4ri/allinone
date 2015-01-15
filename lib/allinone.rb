@@ -1,6 +1,7 @@
 require "allinone/version"
 require "allinone/core"
 require "allinone/site_selector"
+require "request_store"
 
 module Allinone
   module Core

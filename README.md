@@ -31,26 +31,30 @@ https://github.com/Liberlabs/sample_multitenant_app/blob/master/app/models/domai
 
 3. Run the migrations
 
-    rake db:migrate
+   ```rake db:migrate```
 
 4. Add these 2 lines into your ApplicationController, towards the top.
 
+    ```
     include Allinone::Core
     act_as_allinone
+    ```
 
 5. From the rails console, create a site and at least one domain.
 
-    ```s = Site.create name: 'My Site'
-    
-    ```s.domains.create name: 'localhost'
+    ```
+       s = Site.create name: 'My Site'
+       s.domains.create name: 'localhost'
+     ```
 
 You can create more sites and domains if you like. You can also create multiple domains for the same site. Make sure you point the domains you create to localhost using entries in /etc/hosts (on development machines) or using DNS on production servers.
 
 6. Start the rails server and access the site.
 
-   ```rails s
-   
-   ```In the browser, go to http://localhost:3000
+   ```
+      rails s
+      In the browser, go to http://localhost:3000
+   ```
 
 `current_site` method will be accessible from your controllers and views. It will return the site object corresponding to the domain used to access the app. You can use current_site.id to scope the data for a particular site whereever you have to store/access data.
 

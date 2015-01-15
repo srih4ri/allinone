@@ -51,7 +51,7 @@ You can create more sites and domains if you like. You can also create multiple 
       In the browser, go to http://localhost:3000
    ```
 
-`current_site` method will be accessible from your controllers and views. It will return the site object corresponding to the domain used to access the app. You can use current_site.id to scope the data for a particular site whereever you have to store/access data.
+`current_site` method will be accessible from your controllers and views. It will return the site object corresponding to the domain used to access the app. You can use current_site.id to scope the data for a particular site wherever you have to store/access data.
 
 ## Invalid Domain Handing
 

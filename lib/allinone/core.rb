@@ -4,24 +4,24 @@ module Allinone
       base.extend Allinone::Core::ClassMethods
     end
 
-    def current_site
-      RequestStore.store[:current_site]
+    def current_brand
+      RequestStore.store[:current_brand]
     end
 
-    def set_current_site
+    def set_current_brand
       if Rails.env.test?
-        current_site = "" #set a default, passed from the app controller
+        current_brand = "" #set a default, passed from the app controller
       else
-        current_site = Allinone::SiteSelector.new(request.host).fetch
+        current_brand = Allinone::BrandSelector.new(request.host).fetch
       end
 
-      site_not_found_handler unless current_site
+      brand_not_found_handler unless current_brand
 
-      RequestStore.store[:current_site] = current_site
+      RequestStore.store[:current_brand] = current_brand
     end
 
-    def site_not_found_handler
-      render :text => 'Site not Found'
+    def brand_not_found_handler
+      render :text => 'Brand not Found'
     end
   end
 end

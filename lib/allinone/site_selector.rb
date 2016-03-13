@@ -1,5 +1,5 @@
 module Allinone
-  class SiteSelector
+  class BrandSelector
 
     def initialize(request_host)
       @request_host = request_host.downcase
@@ -8,8 +8,8 @@ module Allinone
     end
 
     def fetch
-      site_id = @@domains_map[@request_host]
-      Site.where(id: site_id).first
+      brand_id = @@domains_map[@request_host]
+      Brand.where(id: brand_id).first
     end
 
     private
@@ -25,7 +25,7 @@ module Allinone
     end
 
     def domains_map
-      Hash[*Domain.select([:name,:site_id]).all.collect{|p| [p.name.downcase, p.site_id]}.flatten]
+      Hash[*Domain.select([:name,:brand_id]).all.collect{|p| [p.name.downcase, p.brand_id]}.flatten]
     end
 
     def domains_table_last_updated_at
